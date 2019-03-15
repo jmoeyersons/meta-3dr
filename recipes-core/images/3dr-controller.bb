@@ -44,13 +44,14 @@ IMAGE_INSTALL += " \
     dnsmasq \
     sololink \
     sololink-python \
+    cgroup-lite \
+    docker \
     rpm \
     util-linux \
     artoo-firmware \
     e2fsprogs-e2fsck \
     dosfstools \
     nano \
-    vim \
     openssh-sftp-server \
     3dr-splash \
     persist-logs \
@@ -58,6 +59,9 @@ IMAGE_INSTALL += " \
     stm32loader \
     compat-wireless-all \
 "
+# removed to save space:
+#   vim
+
 
 update_config_files() {
     # update /etc/network/interfaces

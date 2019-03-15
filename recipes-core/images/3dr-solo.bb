@@ -36,6 +36,8 @@ IMAGE_INSTALL += " \
     python-numpy \
     python-posix-ipc \
     python-monotonic \
+    cgroup-lite \
+    docker \
     openssh \
     iptables \
     iw \
@@ -53,12 +55,12 @@ IMAGE_INSTALL += " \
     e2fsprogs-e2fsck \
     dosfstools \
     nano \
-    vim \
     openssh-sftp-server \
     persist-logs \
     rsync \
     compat-wireless-all \
 "
+# removed vim
 
 update_config_files() {
     # update /etc/network/interfaces

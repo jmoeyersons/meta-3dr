@@ -7,8 +7,8 @@ DEPENDS += "lzop-native bc-native"
 
 COMPATIBLE_MACHINE = "(mx6)"
 
-SRCREV = "sololink_v1.3.0-5"
-SRC_URI = "git://github.com/OpenSolo/imx6-linux/"
+SRCREV = "0aa0b6cc1ee61c2fbb3e27be896e18f12c967188"
+SRC_URI = "git://github.com/drake7707/imx6-linux/"
 
 SRC_URI += "\
     https://www.kernel.org/pub/linux/kernel/projects/rt/3.10/older/patch-3.10.17-rt12.patch.bz2;name=rt-patch1 \
@@ -23,6 +23,7 @@ SRC_URI += "\
 	file://aufs \
 	file://0001-dts-changes-to-add-uart5.patch \
 	file://0004-uart-no-dma.patch \
+        file://overlayfs.v18-3.10-rc7.patch \
 "
 
 SRC_URI[rt-patch1.md5sum] = "77a28c8b20b01f280dcd860e606a6edd"
@@ -54,6 +55,7 @@ do_configure_prepend() {
 
 
     cp ${S}/arch/arm/configs/${fsl_defconfig} ${S}/.config
+    echo "Setting ${S}/arch/arm/configs/${fsl_defconfig} as defconfig"
     cp ${S}/arch/arm/configs/${fsl_defconfig} ${S}/../defconfig
 
     cp ${WORKDIR}/aufs_type.h ${S}/include/uapi/linux
