@@ -7,8 +7,8 @@ DEPENDS += "lzop-native bc-native"
 
 COMPATIBLE_MACHINE = "(mx6)"
 
-SRCREV = "0aa0b6cc1ee61c2fbb3e27be896e18f12c967188"
-SRC_URI = "git://github.com/drake7707/imx6-linux/"
+SRCREV = "60f5b4999b1ebf5361eb03ceb46d22de766de439"
+SRC_URI = "git://github.com/jmoeyersons/imx6-linux/"
 
 SRC_URI += "\
     https://www.kernel.org/pub/linux/kernel/projects/rt/3.10/older/patch-3.10.17-rt12.patch.bz2;name=rt-patch1 \
